@@ -1,0 +1,39 @@
+<div style="text-align:center">
+
+  <img width="100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <h1>
+    Login
+  </h1>
+</div>
+
+<!--<app-login></app-login>-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+
+<div>
+  <form [formGroup]="rForm" (ngSubmit)="login(rForm.value)">
+    <div class="form-container">
+      <div class="row columns">
+        <label>Email
+          <input type="email" formControlName="email">
+        </label>
+        <!-- This goes underneath the Name label -->
+        <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{ titleAlert }}</div>
+
+        <label>Password
+          <input type="password" formControlName="password">
+        </label>
+
+        <!-- This goes underneath the Description label -->
+        <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password should contain atleast 8 characters.</div>
+        <!--<label for="validate">Minimum of 3 Characters</label>
+        <input type="checkbox" name="validate" formControlName="validate" value="1"> On-->
+
+        <input type="submit" class="button expanded" value="Login" [disabled]="!rForm.valid">
+        <div>
+          Don't have an account? <a (click)="goToRegistration()">Sign Up</a>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
