@@ -1,6 +1,32 @@
-<div style="text-align:right"><p>
-  {{user.displayName}}
-</p>
+<div class="home_profile">
+  <table>
+  <tr>
+    <td><img src="assets/img/placeholder_user.png" alt="image" width="45" height="45"></td>
+  </tr>
+  <tr>
+    <td><a href="javascript:;" (click)="showProfile()">{{user.displayName}}</a></td>
+  </tr>
+  <tr>
+    <td><input type="button" class="button expanded" value="Logout" (click) = "logout()"></td>
+  </tr>
+</table>
+</div>
+<div class="tabs">
+  <tabs>
+    <tab [tabTitle]="'Home'">
+      <h2>Angular Developer Survey 2018</h2>
+      <p>
 
-<input type="button" class="button expanded" value="Logout" (click) = "logout()">
+      We just launched a short survey! This survey is designed to give you an opportunity to share your experiences, successes, and challenges with Angular so that we can make Angular better in 2018 and beyond.
+
+
+      We’ve also added an extended survey at the end if you are willing to share more about your experiences, and tell us about your work with some of the individual pieces that make up the Angular platform.
+
+      Take the survey here: <a href="https://bit.ly/angular-survey-2018">https://bit.ly/angular-survey-2018</a>
+      </p>
+
+    </tab>
+    <tab tabTitle="Contact us"><app-contactus></app-contactus></tab>
+    <tab tabTitle="About"><app-about></app-about></tab>
+  </tabs>
 </div>

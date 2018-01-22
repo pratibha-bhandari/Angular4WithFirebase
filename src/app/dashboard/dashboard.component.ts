@@ -30,4 +30,9 @@ export class DashboardComponent implements OnInit {
     // Redirect the user
     this.router.navigate([redirect]);
   }
+  showProfile(){
+    console.log("Profile clicked");
+    // Redirect the user to profile
+    this.router.navigate(['/profile']);
+  }
 }

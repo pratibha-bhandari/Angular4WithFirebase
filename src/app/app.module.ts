@@ -16,6 +16,11 @@ import { AngularFireAuthModule} from 'angularfire2/auth';
 // import alert service and component
 import { AlertComponent } from './alert/alert.component';
 import { AlertService } from './providers/alert.service';
+import { Tab } from './tab/tab.component';
+import { Tabs } from './tabs/tabs.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AboutComponent } from './about/about.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -33,6 +38,11 @@ export const firebaseConfig = {
     DashboardComponent,
     RegistrationComponent,
     AlertComponent,
+    Tab,
+    Tabs,
+    ProfileComponent,
+    AboutComponent,
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,

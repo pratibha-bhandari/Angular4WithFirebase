@@ -1,0 +1,15 @@
+.tabs {
+  /*border: 1px solid #e1e1e1;*/
+  margin: 20px;
+  float: left;
+  width: 100%;
+}
+.tab {
+    padding: 25px;
+}
+.home_profile {
+  content: right;
+  text-align:center;
+  margin: 20px;
+  float: right;
+}
